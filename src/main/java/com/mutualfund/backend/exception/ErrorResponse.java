@@ -1,5 +1,6 @@
 package com.mutualfund.backend.exception;
-
+// Handles global exceptions across the application
+// Returns proper error responses to client
 import java.time.LocalDateTime;
 
 public class ErrorResponse {

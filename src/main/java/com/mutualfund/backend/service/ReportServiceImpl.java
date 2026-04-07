@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//Service layer handling business logic for User operations
+// Connects controller with repository layer
 @Service
 public class ReportServiceImpl implements ReportService {
 
