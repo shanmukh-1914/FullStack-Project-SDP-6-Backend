@@ -14,7 +14,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
-
+// Exposes endpoints for client (frontend) to interact with backend services
+// Follows Controller → Service → Repository architecture
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
