@@ -6,7 +6,8 @@ import com.mutualfund.backend.service.InvestmentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-
+// Exposes endpoints for client (frontend) to interact with backend services
+// Follows Controller → Service → Repository architecture
 @RestController
 @RequestMapping("/api/investor")
 public class InvestmentController {

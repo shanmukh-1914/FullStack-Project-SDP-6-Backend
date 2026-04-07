@@ -6,7 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
-
+// Exposes endpoints for client (frontend) to interact with backend services
+// Follows Controller → Service → Repository architecture
 @RestController
 @RequestMapping("/api")
 public class MutualFundController {
