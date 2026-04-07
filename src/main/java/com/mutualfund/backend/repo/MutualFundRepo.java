@@ -7,6 +7,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 
+//Repository interface for User entity
+// Provides CRUD operations using Spring Data JPA
 @Repository
 public interface MutualFundRepo extends JpaRepository<MutualFund, Long> {
     List<MutualFund> findByCategory(String category);

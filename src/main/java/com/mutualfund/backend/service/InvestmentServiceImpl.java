@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+//Service layer handling business logic for User operations
+// Connects controller with repository layer
 @Service
 public class InvestmentServiceImpl implements InvestmentService {
 

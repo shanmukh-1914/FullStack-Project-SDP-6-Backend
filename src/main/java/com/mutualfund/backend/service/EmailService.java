@@ -4,6 +4,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+//Service layer handling business logic for User operations
+// Connects controller with repository layer
 @Service
 public class EmailService {
 

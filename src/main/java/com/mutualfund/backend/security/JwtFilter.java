@@ -12,6 +12,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 
+// JWT filter for validating user authentication
+// Intercepts requests and checks token validity
 @Component
 public class JwtFilter extends OncePerRequestFilter {
 

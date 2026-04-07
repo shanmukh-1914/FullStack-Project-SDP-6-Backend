@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 import java.util.List;
 
+//Repository interface for User entity
+// Provides CRUD operations using Spring Data JPA
 @Repository
 public interface UserRepo extends JpaRepository<User, Long> {
     Optional<User> findByEmail(String email);

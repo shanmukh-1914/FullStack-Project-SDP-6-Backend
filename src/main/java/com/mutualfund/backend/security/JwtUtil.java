@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 import java.security.Key;
 import java.util.Date;
 
+// JWT filter for validating user authentication
+// Intercepts requests and checks token validity
 @Component
 public class JwtUtil {
 

@@ -3,6 +3,8 @@ package com.mutualfund.backend.service;
 import com.mutualfund.backend.dto.MutualFundDTO;
 import java.util.List;
 
+//Service layer handling business logic for User operations
+// Connects controller with repository layer
 public interface MutualFundService {
     List<MutualFundDTO> getAllFunds();
     MutualFundDTO getFundById(Long id);

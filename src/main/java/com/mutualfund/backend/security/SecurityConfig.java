@@ -13,6 +13,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+// JWT filter for validating user authentication
+// Intercepts requests and checks token validity
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity

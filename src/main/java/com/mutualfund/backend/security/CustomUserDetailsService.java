@@ -8,7 +8,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import java.util.List;
-
+// JWT filter for validating user authentication
+// Intercepts requests and checks token validity
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
