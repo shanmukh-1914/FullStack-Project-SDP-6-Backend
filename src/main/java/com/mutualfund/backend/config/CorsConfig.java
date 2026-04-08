@@ -13,7 +13,9 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of(
+
+        
+        config.setAllowedOriginPatterns(List.of(
             "http://localhost:5173",
             "http://localhost:5174",
             "http://localhost:5175",
@@ -21,11 +23,26 @@ public class CorsConfig {
             "http://127.0.0.1:5174",
             "http://127.0.0.1:5175",
             "http://localhost:3000",
-            "https://full-stack-project-sdp-6.vercel.app"
+            "https://full-stack-project-sdp-6.vercel.app",
+            "https://*.railway.app",        
+            "https://*.up.railway.app"      
         ));
-        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        config.setAllowedHeaders(List.of("*"));
+
+        
+        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
+
+        
+        config.setAllowedHeaders(List.of(
+            "Authorization",
+            "Content-Type",
+            "Accept",
+            "Origin",
+            "X-Requested-With"
+        ));
+
+        config.setExposedHeaders(List.of("Authorization"));
         config.setAllowCredentials(true);
+        config.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
