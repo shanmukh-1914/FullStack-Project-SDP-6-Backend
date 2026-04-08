@@ -41,11 +41,11 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<UserDTO> register(@RequestBody RegisterRequest request) {
         UserDTO user = userService.register(request);
-        try {
-            emailService.sendWelcomeEmail(user.getEmail(), user.getFullName());
-        } catch (Exception e) {
+       // try {
+       //     emailService.sendWelcomeEmail(user.getEmail(), user.getFullName());
+      //  } catch (Exception e) {
             // continue even if email fails
-        }
+      //  }
         return ResponseEntity.ok(user);
     }
 
