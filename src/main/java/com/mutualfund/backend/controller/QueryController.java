@@ -51,14 +51,14 @@ public class QueryController {
             @PathVariable Long advisorId,
             @RequestBody ReplyRequest request) {
         InvestorQueryDTO replied = queryService.replyToQuery(queryId, advisorId, request);
-        try {
-            emailService.sendQueryReplyEmail(
-                    replied.getInvestorEmail(),
-                    replied.getInvestorName(),
-                    replied.getReplyText());
-        } catch (Exception e) {
+       // try {
+       //     emailService.sendQueryReplyEmail(
+         //           replied.getInvestorEmail(),
+          //          replied.getInvestorName(),
+            //        replied.getReplyText());
+        //} catch (Exception e) {
             // continue even if email fails
-        }
+        //}
         return ResponseEntity.ok(replied);
     }
 
